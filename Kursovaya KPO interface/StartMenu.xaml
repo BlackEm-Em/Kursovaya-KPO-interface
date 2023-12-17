@@ -1,0 +1,179 @@
+﻿<Page x:Class="Kursovaya_KPO_interface.StartMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kursovaya_KPO_interface"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1100"
+      ShowsNavigationUI="False">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="460"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--Left Side Start Menu-->
+        <Border CornerRadius="10 0 0 10"
+                BorderThickness="0">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5, 0" EndPoint="0.5, 1">
+                    <GradientStop Color="#c4c4c4"  Offset="0"/>
+                    <GradientStop Color="#ffffff"  Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <TextBlock x:Name="mainProjectName"
+                   Grid.Column="0"
+                   FontFamily="Montserrat" 
+                   FontSize="80"
+                   FontWeight="Light"
+                   TextAlignment="Center"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+                   Height="290"
+                   IsEnabled="False">
+                <Run Text="Family Finance"/>
+                <LineBreak/>
+                <Run Text="Analysis"/>
+            </TextBlock>
+
+        </Border>
+
+        <!--Authorezation Side Start Menu-->
+        <Border Grid.Column="1" CornerRadius="0 10 10 0">
+            <Border.Background>
+                <SolidColorBrush Color="#ffffff"/>
+            </Border.Background>
+
+            <StackPanel>
+
+                <TextBlock Text="Авторизация" 
+                           FontSize="36" 
+                           HorizontalAlignment="Center"
+                           FontFamily="Montserrat"
+                           FontWeight="Light"
+                           Margin="0,105,0,0">
+                </TextBlock>
+
+                <Separator Margin="150,20,150,20">
+                    
+                </Separator>
+
+                <Border CornerRadius="10" 
+                        HorizontalAlignment="Center"
+                        Margin="0 17 0 0"
+                        BorderBrush="Black"
+                        BorderThickness="0"
+                        Width="324"
+                        Height="46">
+
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 0.5">
+                            <GradientStop Color="#c4c4c4"  Offset="0"/>
+                            <GradientStop Color="#ffffff"  Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <TextBox Text="Логин" 
+                             FontSize="32" 
+                             FontFamily="Montserrat"
+                             FontWeight="Light"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Center"
+                             Background="Transparent"
+                             Foreground="#a2a2a2"
+                             BorderBrush="{x:Null}" 
+                             Width="323"
+                             Margin="5 0 0 0">
+                    </TextBox>
+
+                </Border>
+
+                <Border 
+                        CornerRadius="10" 
+                        HorizontalAlignment="Center"
+                        Margin="0 38 0 0"
+                        BorderBrush="Black"
+                        BorderThickness="0"
+                        Width="324"
+                        Height="46">
+
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 0.5">
+                            <GradientStop Color="#c4c4c4"  Offset="0"/>
+                            <GradientStop Color="#ffffff"  Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+
+                    <PasswordBox 
+                            Password="Пароль"
+                            PasswordChar="*"
+                            FontSize="32"
+                            FontFamily="Montserrat"
+                            FontWeight="Light"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#a2a2a2"
+                            BorderBrush="{x:Null}"
+                            Width="323"
+                            Margin="5 0 0 0">
+                    </PasswordBox>
+
+                </Border>
+
+                <Border CornerRadius="10" 
+                        HorizontalAlignment="Center"
+                        Margin="0 51 0 0"
+                        BorderBrush="{x:Null}"
+                        Width="169"
+                        Height="53">
+
+                    <Border.Background>
+                        <SolidColorBrush Color="#e4e4e4"/>
+                    </Border.Background>
+
+                    <Button BorderBrush="{x:Null}"
+                            Background="Transparent"
+                            Content="Вход"
+                            FontFamily="Montserrat"
+                            FontSize="32"
+                            FontWeight="Light"
+                            Click="ButtonStartEnter_Click">
+                        <!--Style="{StaticResource AllButtons}"-->
+                    </Button>
+
+                </Border>
+
+                <Border CornerRadius="10 0 10 0" 
+                        HorizontalAlignment="Right"
+                        Margin="0 107 0 0"
+                        BorderBrush="{x:Null}"
+                        Width="169"
+                        Height="53">
+
+                    <Border.Background>
+                        <SolidColorBrush Color="#e4e4e4"/>
+                    </Border.Background>
+
+                    <Button BorderBrush="{x:Null}"
+                            Background="Transparent"
+                            Content="Выход"
+                            FontFamily="Montserrat"
+                            FontSize="32"
+                            FontWeight="Light"
+                            Click="ButtonExit_Click">
+                    </Button>
+
+                </Border>
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+    
+</Page>
